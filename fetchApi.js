@@ -43,3 +43,10 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
     .then(response=>response.json())
     .then(data=>console.log(data))
     .catch(err=>console.log(err))
+
+    // delete işlemi
+    fetch("https://jsonplaceholder.typicode.com/posts/1",{
+        method:'DELETE'
+    })
+    .then(response=>console.log("silme işlemi başarılı")) // Burada response değişkeninde herhangi bir veri olmayacağından ekrana değişkeni değilde metin yazdırdık.
+    .catch(err=>console.log(err))
